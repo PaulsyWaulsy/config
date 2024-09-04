@@ -31,8 +31,15 @@ opt.wrap = false
 -- gives me the chunky cursor in insert mode
 opt.guicursor = ''
 
+opt.swapfile = false
+-- make a backup before overwritting file
+opt.backup = true
+vim.opt_global.backupdir = os.getenv 'HOME' .. '/.nvimTmp/backupdir'
+opt.backupcopy = 'auto'
+
 -- hold undos into a file for persistance
 opt.undofile = true
+opt.undodir = os.getenv 'HOME' .. '/.nvimTmp/undodir'
 
 --highlight current search
 opt.hlsearch = true
